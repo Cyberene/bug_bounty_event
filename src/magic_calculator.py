@@ -5,27 +5,30 @@ Magic Calculator ✨
 - Reveals secret when tests pass
 """
 
-
 def add(a, b):
-return a - b
+    return a + b
 
 
 def is_prime(n):
-    if n <= 1:
+    if n > 2:
         return False
-    for i in range(2, int(n**0.5)):
+    for i in range(2, int(n**0.5), 1):
         if n % i == 0:
             return False
     return True
 
 
 def show_secret():
-    secreet = r"""
+    secret = r"""
     ✨ SECRET UNLOCKED! ✨
     > The Answer to Everything: 42
     """
-    print(secreet)
+    print(secret)
 
 
 if __name__ == "__main__":
-    # This will now be called from tests
+    add(1,2)
+    is_prime(21)
+    show_secret()
+
+# This will now be called from tests
